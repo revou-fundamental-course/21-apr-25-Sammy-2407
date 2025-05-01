@@ -3,75 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Konfersi Suhu - Sammy</title>
-
+    <title>Temperature Calculator</title>
+    <!-- Link ke css -->
     <link rel= "stylesheet" href="css/style.css">
+
+
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <h1>Website Konfersi Suhu - Sammy</h1>
+        <h1>Temperature Calculator</h1>
+
+        <button id="darkModeToggle" class="button button1">Dark Mode</button>
     </header>
 
+    <!-- main -->
     <main>
         <!-- intro -->
         <section>
-            <p>this is a temperatur confertion web</p>
+            <p>Enter the temperature in Celsius in the box below, then click the convert button to convert to Fahrenheit.</p>
         </section>
-
-        <form>
-            <div>
+        
+        <!-- Form input konfersi -->
+        <form class="section-content">
+            <div class="section-item">
                 <label for="konfersi-input">Celcius (&deg;C):</label>
             </div>
 
-            <div>
-                <textarea id="konfersi-input"></textarea>
-            </div>
+            <!-- css sstyle for input -->
+            <input type="text" name="convertion" placeholder="Celcius">
 
-            <div>
-                <button>Konfersi</button>
-                <button>Reset</button>
-                <button>Reverse</button>
+            
+            <div class="section-item">
+                <button class="button button1">Konfersi</button>
+                <button class="button button1">Reset</button>
+                <button class="button button1">Reverse</button>
             </div>
         </form>
 
-        <section>
-            <div>
+        <!-- Hasil Konfersi -->
+        <section class="section-content">
+            <div class="section-item">
                 <label for="result-input">Fahrenheit (&deg;F):</label>
             </div>
 
-            <div>
+            <div class="section-item">
                 <textarea id="result-input" readonly></textarea>
             </div>
         </section>
 
-        <section>
-            <div>
-                <label for="calculate-detail">Cara Kalkulasi</label>
+        <!-- Calculation -->
+        <section class="section-content">
+            <div class="section-item">
+                <label for="calculate-detail">Calculation:</label>
             </div>
 
-            <div>
+            <div class="section-item">
                 <textarea id="calculate-detail" readonly></textarea>
             </div>
         </section>
 
+        <!-- Informasi Tambahan -->
         <section>
             <header>
-                <h1>Cara konfersi Dari Celcius (&deg;C) Ke Fahrenheit (&deg;F)</h1>
+                <h1>How to convert from Celsius (&deg;C) to Fahrenheit (&deg;F)</h1>
             </header>
 
-            <hr/>
-            <!-- Konten informasi -->
-            <article>
-                <p>Suhu <span class="formula">S</span> dalam derajat Fahrenheit (&deg;F)</p>
 
-                <!-- formula -->
-                <div>
-                    <span class="formula">S </span> <sub>(&deg;F)</sub> </div>
+            <!-- Konten informasi bagian bawah -->
+            <article>
+                <p>This website convert Celsius to Fahrenheit and vice versa using a standard formulation of conversion.
+                    <br><span class="formula">T</span> in Fahrenheit (&deg;F) can be converted into degrees Celsius (&deg;C) through the following calculation:</p>
+
+                <!-- formula for convertion C to F -->
+                <div class="formula">
+                    T <sub>(&deg;F)</sub> = (T<sub>(&deg;C)</sub> x 9/5) + 32
+                </div>
+
+                <div>or</div>
+
+                <div class="formula">
+                    T<sub>(&deg;F)</sub> = (T<sub>(&deg;C)</sub> x 1.8) + 32
+                </div>
             </article>
         </section>
     </main>
 
-    <footer></footer>
+    <hr/>
+
+    <footer>
+        <p>&copy; 2025 Sammy. All rights reserved.</p>
+    </footer>
     
 </body>
+
+<script src="js/script.js"></script>
 </html>

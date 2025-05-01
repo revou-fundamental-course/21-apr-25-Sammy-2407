@@ -1,4 +1,236 @@
+/* padding body */
+body {
+    padding: 32px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* alignment paragraph */
+p {
+    text-align: center;
+    font-size: large;
+}
+
+label {
+    text-align: center;
+    font-size: large;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* jarak bawah setiap section */
+.section-item {
+    margin-bottom: 8px;
+}
+
+/* margin content */
+.section-content {
+    margin: 32px auto;
+    max-width: 700px;
+}
+
+/* input untuk celcius */
+input[type=text] {
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('../asset/thermoicon.png');
+    background-position: 10px 10px; 
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    margin-bottom: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+    max-width: 500px;
+}
+
+/* style box hasil konversi */
+#result-input,
+textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: vertical;
+    transition: all 0.3s ease-in-out;
+    color: #333;
+}
+
+/* kalkulasi box */
+textarea {
+    min-height: 100px;
+}
+
+/* formula styling */
 .formula {
-    font-style: italic;
-    font-size: x-large;
+    font-size: large;
+    margin: 10px 0;
+}
+
+/* style tombol */
+.button {
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #04AA6D;
+}
+
+.button1:hover {
+    background-color: #04AA6D;
+    color: white;
+}
+
+/* responsive*/
+
+/* max */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 16px;
+    }
+
+    .section-content {
+        margin: 16px 0;
+    }
+
+    input[type=text],
+    #result-input,
+    textarea {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    .button {
+        width: 100%;
+        margin: 6px 0;
+        font-size: 1em;
+    }
+
+    .button1 {
+        display: block;
+    }
+}
+ /* min */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    label, p {
+        font-size: 1em;
+    }
+}
+
+/* dark mode otomatis dari prefferensi sistem */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1e1e1e;
+        color: #f0f0f0;
+    }
+
+    input[type="text"],
+    #result-input,
+    textarea {
+        background-color: #3a3a3a;
+        color: #f0f0f0;
+        border: 2px solid #555;
+    }
+
+    .button1 {
+        background-color: transparent;
+        color: white;
+        border-color: #00c788;
+    }
+
+    .button1:hover {
+        background-color: #00c788;
+        color: black;
+    }
+
+    .section-content {
+        background-color: #2b2b2b;
+        border-radius: 8px;
+        padding: 10px;
+    }
+}
+
+
+/* dark mode */
+body.dark {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+}
+
+body.dark .section-content {
+    background-color: #2b2b2b;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+body.dark input[type="text"],
+body.dark #result-input,
+body.dark textarea {
+    background-color: #3a3a3a;
+    color: #f0f0f0;
+    border: 2px solid #555;
+}
+
+body.dark .button1 {
+    background-color: transparent;
+    color: white;
+    border-color: #00c788;
+}
+
+body.dark .button1:hover {
+    background-color: #00c788;
+    color: black;
+}
+
+/* posisi button dark mode */
+
+#darkModeToggle {
+    position: fixed;
+    top: 16px; /* jarak dari atas */
+    right: 16px; /* jarak dari kanan */
+    z-index: 1000; /* pastikan tombol selalu di atas konten lainnya */
+    padding: 10px 16px;
+    font-size: 16px;
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#darkModeToggle:hover {
+    background-color: #00c788;
 }
